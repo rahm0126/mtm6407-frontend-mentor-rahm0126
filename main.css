@@ -1,0 +1,65 @@
+.container {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400, 700, 800;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }  
+  .hero-news {
+    display: flex;
+  }
+  
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .news {
+    flex: 1 1 50%;
+    padding: 0 20px;
+  }
+  
+  .content {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+  
+
+.nav {
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    text-align: right;
+  }
+  .nav a{
+    text-decoration: none;
+    color:rgb(23, 23, 23);
+    margin: 2px;
+    padding: 3px;
+  }
+  .part2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    flex-grow: 2;
+  }
+  .number1 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+  }
+  .small {
+    display: flex;
+    flex-direction: column;
+  }
