@@ -1,34 +1,86 @@
 .container {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400, 700, 800;
+    font-weight: 400;
     font-style: normal;
     font-variation-settings:"slnt" 0;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }  
+  } 
   .hero-news {
-    display: flex;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 350px 350px 300px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .a {
+    grid-column: 1 / span 2;
+  }
+  .b {
+    grid-column: 3 ;
+    grid-row: 1 / span 2;
+  }
+  .c {
+    grid-column: 1 ;
+    grid-row: 2 ;
+  }
+  .d {
+    grid-column: 2 ;
+    grid-row: 2 ;
+  }
+  body {
+    font-size: 15px;
   }
   
   .hero {
     width: 100%;
-    max-width: 100%;
     height: auto;
+  }
+  h1 {
+    font-weight: bold;
+  }
+  .d p{
+  color: black;
+  }
+  .d button {
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    border: none;
+    padding: 10px 20px; 
+    margin: 15px;
+  }
+  .d button:hover {
+    background-color: hsl(240, 100%, 5%);
+  }
+  .news h5:hover{
+    color: hsl(35, 77%, 62%);
+  }
+  .nav-link a:hover {
+    color: hsl(5, 85%, 63%);
   }
   
   .news {
-    flex: 1 1 50%;
+    background-color: hsl(240, 100%, 5%);
     padding: 0 20px;
+    height: auto;
   }
+  .news h2 {
+    color: hsl(35, 77%, 62%);
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .news h5, p {
+    color: hsl(36, 100%, 99%);
+    margin: 10px;
+    padding: 5px;
+  }
+  hr {
+    color:hsl(36, 100%, 99%);
+    height: 2px;
+  }
+  
   
   .content {
     flex: 1 1 100%;
@@ -37,7 +89,8 @@
   
 
 .nav {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     margin: 20px;
     padding: 10px;
     text-align: right;
@@ -63,3 +116,49 @@
     display: flex;
     flex-direction: column;
   }
+/*part 2*/
+  .wrapper-2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .box {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .flex {
+      display: flex;
+      flex-direction: column;
+      margin: 3px;
+      padding: 2px;
+    }
+.box img {
+  height: 30vh;
+}
+.box p {
+  color: black;
+}
+.flex h5, p {
+  margin: 0;
+  padding: 0;
+}
+.flex h5:hover{
+  color: hsl(5, 85%, 63%);
+}
+.flex h2 {
+  color: hsl(233, 8%, 79%);
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-news {
+    grid-template-columns: 1fr;
+  }
+
+  .news,
+  .box {
+    padding: 10px;
+  }
+}
